@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'hero_regular';
+  src: url(assets/fonts/hero_regular.ttf)
+  format("opentype");
+}
+
+@font-face {
+  font-family: 'minion';
+  src: url(assets/fonts/minion_pro_regular.otf) format("opentype");
+}
+
+
+.hero_regular {
+  font-family: 'hero_regular';
+}
+
+.minion {
+  font-family: 'minion' !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+/* In your global CSS */
+.hide-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Edge */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}

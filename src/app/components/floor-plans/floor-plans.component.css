@@ -1,0 +1,18 @@
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: white !important;
+}
+
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: white !important;
+}
+
+._mat-animation-noopable span.mdc-tab-indicator__content, ._mat-animation-noopable span.mdc-tab__text-label {
+  transition: none;
+}
+.mat-mdc-tab .mdc-tab__text-label {
+  color: white !important;
+  font-family: 'tcm';
+  /* display: inline-flex; */
+  align-items: center;
+}

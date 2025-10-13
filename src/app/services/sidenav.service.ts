@@ -1,0 +1,27 @@
+import { Injectable } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SidenavService {
+  private sidenav!: MatSidenav;
+
+  public setSidenav(sidenav: MatSidenav) {
+    this.sidenav = sidenav;
+    console.log(sidenav)
+  }
+
+  public open() {
+    console.log('called!');
+    return this.sidenav.open();
+  }
+
+  public close() {
+    return this.sidenav.close();
+  }
+
+  public toggle(): void {
+    this.sidenav.toggle();
+  }
+}

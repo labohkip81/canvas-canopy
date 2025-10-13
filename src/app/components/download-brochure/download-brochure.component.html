@@ -1,0 +1,126 @@
+<div class="h-fit w-fit bg-cover max-w-md text-white  bg-[url('assets/ivy/backgrounds/background.webp')]  z-[99999999]">
+     <div class="relative flex justify-between items-start">
+        <!-- you can put a title on the left instead of this empty div -->
+        <div></div>
+      
+        <button
+          mat-button
+          [mat-dialog-close]="true"
+          aria-label="Close"
+          class="bg-white top-4 right-4  /* or keep in normal flow: remove absolute + use ml-auto */
+                 bg-black/40 hover:bg-black/60
+                 rounded-full p-2
+                 flex items-center justify-center"
+        >
+          <mat-icon  [mat-dialog-close]="true"  class="text-white text-2xl leading-none close-icon__svg">close</mat-icon>
+        </button>
+      </div>
+  <h2 mat-dialog-title class="text-white">
+      <span class="text-white minion">Download Brochure</span>
+  </h2>
+  <form
+      [formGroup]="DownloadBrochureFormGroup"
+      (submit)="downloadPdf(DownloadBrochureFormGroup.value)"
+      class="mt-8"
+  >
+      <mat-dialog-content class="mat-typography rounded-xl max-w-md">
+          <p class="text-white">Fill the form below to download brochure</p>
+
+          <!-- Name field -->
+          <mat-form-field class="w-full rounded-lg">
+              <mat-label>Full name</mat-label>
+              <input id="name" [formControlName]="'name'" matInput />
+              <mat-error> Full name is required </mat-error>
+          </mat-form-field>
+
+          <!-- Email field -->
+          <mat-form-field class="w-full">
+              <mat-label>Email address</mat-label>
+              <input
+                  id="email"
+                  [formControlName]="'email'"
+                  type="email"
+                  matInput
+              />
+              <mat-error
+                  *ngIf="
+                      DownloadBrochureFormGroup.get('email')?.hasError(
+                          'required'
+                      )
+                  "
+              >
+                  Email address is required
+              </mat-error>
+              <mat-error
+                  *ngIf="
+                      DownloadBrochureFormGroup.get('email')?.hasError(
+                          'email'
+                      ) &&
+                      !DownloadBrochureFormGroup.get('email')?.hasError(
+                          'required'
+                      )
+                  "
+              >
+                  Please enter a valid email address
+              </mat-error>
+          </mat-form-field>
+
+          <!-- Phone field -->
+          <mat-form-field class="w-full">
+              <mat-label>Phone</mat-label>
+              <input
+                  id=""
+                  matInput
+                  type="text"
+                  [formControlName]="'phoneNumber'"
+              />
+              <mat-error> Phone is required </mat-error>
+          </mat-form-field>
+
+          <!-- Company field -->
+          <mat-form-field class="w-full">
+              <mat-label>Company</mat-label>
+              <input
+                  [formControlName]="'company'"
+                  id="company-confirm"
+                  matInput
+              />
+          </mat-form-field>
+
+          <!-- Note field -->
+          <mat-form-field class="w-full">
+              <mat-label>Message</mat-label>
+              <input id="note" [formControlName]="'message'" matInput />
+          </mat-form-field>
+
+          <a
+              id="downLoadIt"
+              href="assets/documents/ivy_brochure.pdf"
+              download
+              class="hidden"
+          >
+          </a>
+
+          <!-- ToS and PP -->
+          <div class="inline-flex text-white items-end w-full mt-1.5">
+              <mat-checkbox
+                  [color]="'primary'"
+                  [formControlName]="'agree_to_terms'"
+              >
+                  <span class="text-white"
+                      >I agree to the terms and conditions</span
+                  >
+              </mat-checkbox>
+          </div>
+      </mat-dialog-content>
+      <mat-dialog-actions align="end" class="space-x-4">
+          <button
+              type="submit"
+              class="bg-white fahkwang px-6 py-3 mt-6 text-black rounded-full"
+              cdkFocusInitial
+          >
+              Download
+          </button>
+      </mat-dialog-actions>
+  </form>
+</div>

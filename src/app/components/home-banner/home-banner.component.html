@@ -1,0 +1,39 @@
+<div class="relative h-screen w-full" id="home">
+
+  <!-- Background image -->
+  <img src="/assets/ivy/exterior/extrance3.webp" class="absolute top-0 left-0 w-full h-full object-cover" alt="">
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/10"></div>
+
+  <!-- Content wrapper -->
+  <section class="relative flex flex-col justify-end h-full px-6 lg:px-16 pb-12 lg:pb-20">
+
+    <!-- Bottom-left content -->
+    <div class="max-w-full space-y-6 lg:space-y-8 text-center">
+
+      <div class="w-full flex flex-row justify-center">
+        <img src="/assets/ivy/logo/logo_white.webp" class="h-20 object-scale-down" alt="">
+      </div>
+
+      <!-- Tagline -->
+      <p class="uppercase text-3xl lg:text-4xl minion font-light text-white leading-tight">
+        Designed for life, Built for value
+      </p>
+
+      <div class="h-8"></div>
+
+      <mat-button (click)="openDialog()" type="submit" class="border-white border rounded-xl text-white hover:text-[#e5b674] 
+         cursor-pointer text-xs sm:text-sm lg:text-lg px-5 py-3 sm:px-4 sm:py-3 lg:px-6 lg:py-3">
+        <mat-icon class="-mb-2 lg:-mb-2 h-4 pr-6">message</mat-icon>
+        <span class="font-bold uppercase  hero_regular">&nbsp;Inquire Today</span>
+      </mat-button>
+
+
+
+      <!-- CTA -->
+
+    </div>
+
+  </section>
+</div>

@@ -1,0 +1,54 @@
+<header class="fixed top-0 left-0 w-full z-[99]" id="home">
+  <nav class="px-4 lg:px-12 py-4 flex flex-row justify-between 
+          bg-gray/10 backdrop-blur-sm shadow-sm  text-white
+          w-full" [ngClass]="{
+          'bg-[#996e4c] text-white': isScrolledPast70,
+           'text-white': !isScrolledPast70,
+  }">
+
+    <!-- Logo -->
+    <div class="flex flex-col w-fit space-y-2">
+      <img src="/assets/ivy/logo/logo_white.webp" alt="logo" class="h-12 md:h-16 object-scale-down cursor-pointer"
+        (click)="scrollToElement('home')" />
+    </div>
+
+    <!-- Mobile Menu Icon -->
+    <div class="flex md:hidden">
+      <mat-icon class=" mt-2" (click)="openSideNav()">menu</mat-icon>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex flex-wrap justify-end items-center mx-auto mr-12 majesty text-white hero_regular">
+      <div class="flex items-center space-x-6">
+
+        <mat-button (click)="scrollToElement('home')" class=" hover:text-[#bd9862] text-xs px-6 py-2.5 cursor-pointer">
+          <a (click)="scrollToElement('home')" class="font-light text-lg uppercase tcm">Home</a>
+        </mat-button>
+
+        <mat-button (click)="scrollToElement('residences')" class=" hover:text-[#bd9862] text-xs px-6 py-2.5 cursor-pointer">
+          <a class="font-light text-lg uppercase tcm">Residences</a>
+        </mat-button>
+
+        <mat-button (click)="scrollToElement('amenities')" class=" hover:text-[#bd9862] text-xs px-6 py-2.5 cursor-pointer">
+          <a class="font-light text-lg uppercase tcm">Amenities</a>
+        </mat-button>
+
+        <mat-button (click)="scrollToElement('location')" class=" hover:text-[#bd9862] text-xs px-6 py-2.5 cursor-pointer">
+          <a class="font-light text-lg uppercase tcm">Location</a>
+        </mat-button>
+
+        <mat-button (click)="scrollToElement('team')" class=" hover:text-[#bd9862] text-xs px-6 py-2.5 cursor-pointer">
+          <a class="font-light text-lg uppercase tcm">Team</a>
+        </mat-button>
+
+
+
+        <!-- <mat-button (click)="openDialog()" class=" hover:text-[#bd9862] border px-6 py-2.5 rounded-xl">
+          <mat-icon class="-mb-2 h-4">try</mat-icon>
+          <span class="font-light text-lg uppercase tcm">Inquire</span>
+        </mat-button> -->
+
+      </div>
+    </div>
+  </nav>
+</header>

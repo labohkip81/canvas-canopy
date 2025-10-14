@@ -10,8 +10,8 @@
 }
 
 @font-face {
-  font-family: 'minion';
-  src: url(assets/fonts/minion_pro_regular.otf) format("opentype");
+  font-family: ' hero_regular';
+  src: url(assets/fonts/ hero_regular_pro_regular.otf) format("opentype");
 }
 
 
@@ -19,8 +19,8 @@
   font-family: 'hero_regular';
 }
 
-.minion {
-  font-family: 'minion' !important;
+. hero_regular {
+  font-family: ' hero_regular' !important;
 }
 
 html,

@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: ' hero_regular';
-  src: url(assets/fonts/ hero_regular_pro_regular.otf) format("opentype");
+  src: url(assets/fonts/hero_regular.ttf) format("opentype");
 }
 
 
@@ -19,7 +19,7 @@
   font-family: 'hero_regular';
 }
 
-. hero_regular {
+.hero_regular {
   font-family: ' hero_regular' !important;
 }
 

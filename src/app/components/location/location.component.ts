@@ -2,11 +2,12 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import { ImageGalleryComponent } from "../image-gallery/image-gallery.component";
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../../shared/material/material.module';
 
 @Component({
   selector: 'app-location',
   standalone: true,
-  imports: [ImageGalleryComponent, CommonModule],
+  imports: [ImageGalleryComponent, CommonModule, MaterialModule],
   templateUrl: './location.component.html',
   styleUrl: './location.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
